@@ -5,6 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 
 import { TopBarComponent } from './top-bar/top-bar.component';
+import { LoggerService } from './logger.service';
 
 @NgModule({
   
@@ -16,7 +17,7 @@ import { TopBarComponent } from './top-bar/top-bar.component';
     BrowserModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [LoggerService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
