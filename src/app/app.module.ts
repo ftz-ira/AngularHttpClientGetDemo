@@ -5,11 +5,15 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 
 import { TopBarComponent } from './top-bar/top-bar.component';
-import { LoggerService } from './logger.service';
+import { LoggerService } from './services/logger.service';
+
+import { ProductsComponent } from './products.component';
 
 @NgModule({
   
+ 
  declarations: [
+    ProductsComponent,
     TopBarComponent,
     AppComponent
   ],
