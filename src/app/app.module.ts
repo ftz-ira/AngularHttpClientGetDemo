@@ -5,11 +5,17 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 
 import { TopBarComponent } from './top-bar/top-bar.component';
-import { LoggerService } from './logger.service';
+import { LoggerService } from './services/logger.service';
+
+import { ProductsComponent } from './products/products.component';
+
+import { ProducthttpService } from './services/productHttp.service';
+import { ProductfactoryService } from './services/productFactory.service';
 
 @NgModule({
   
  declarations: [
+    ProductsComponent,
     TopBarComponent,
     AppComponent
   ],
@@ -17,7 +23,9 @@ import { LoggerService } from './logger.service';
     BrowserModule,
     HttpClientModule
   ],
-  providers: [LoggerService],
+  
+
+providers: [ProducthttpService,LoggerService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
