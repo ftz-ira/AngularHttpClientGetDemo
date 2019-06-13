@@ -7,11 +7,13 @@ import { AppComponent } from './app.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { LoggerService } from './services/logger.service';
 
-import { ProductsComponent } from './products.component';
+import { ProductsComponent } from './products/products.component';
+
+import { ProducthttpService } from './services/productHttp.service';
+import { ProductfactoryService } from './services/productFactory.service';
 
 @NgModule({
   
- 
  declarations: [
     ProductsComponent,
     TopBarComponent,
@@ -21,7 +23,9 @@ import { ProductsComponent } from './products.component';
     BrowserModule,
     HttpClientModule
   ],
-  providers: [LoggerService],
+  
+
+providers: [ProducthttpService,LoggerService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
